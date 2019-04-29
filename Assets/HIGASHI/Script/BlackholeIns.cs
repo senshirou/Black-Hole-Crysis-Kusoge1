@@ -27,7 +27,7 @@ public class BlackholeIns : MonoBehaviour {
         wave = new Vector3(-190,0,Random.Range(-190, 190));
         
 
-	//test
+
         if (time >= 3f)
         {
             Instantiate(black, wave, transform.rotation);
