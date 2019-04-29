@@ -1,0 +1,37 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Circle : MonoBehaviour {
+
+    //円運動させたい物体。Rigidbodyをコンポーネントさせておく
+    [SerializeField] Rigidbody rbody; 
+    //速度を設定
+    private float speed =1.0f;
+    //半径を設定
+    private float radius =2.0f;
+    
+    //float型を定義しておく
+    float movex;
+    float movez;
+
+	// Use this for initialization
+	void Start () {
+        
+
+        
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+        //X(Sin波）・Z座標(Cos波）の指定をしておく。わからないときは三角関数を調べる。
+        movex = radius * Mathf.Sin(Time.time * speed);
+        movez = radius * Mathf.Cos(Time.time * speed);
+
+        //Rigidbodyのオブジェクトを移動。
+        rbody.MovePosition(new Vector3(movex, transform.position.y, movez));
+        
+
+    }
+}
