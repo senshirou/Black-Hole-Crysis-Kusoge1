@@ -42,6 +42,8 @@ public class BlackholeIns : MonoBehaviour {
             times = Random.Range(3,5);
         }
 
+    //ノートPCから
+
         
 
         
